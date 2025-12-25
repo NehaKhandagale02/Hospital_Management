@@ -19,6 +19,7 @@ public class PatientController {
     @PostMapping("/save")
     public ResponseEntity<Patient> savePatient(@RequestBody Patient patient) {
         Patient savedPatient = patientService.savePatient(patient);
+        System.out.println("Patient saved successfully....");
         return new ResponseEntity<>(savedPatient, HttpStatus.CREATED);
     }
 
